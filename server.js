@@ -33,7 +33,7 @@ if (config.server.update) {
     logger.error('[SERVER] La Actualizacion Es Falsa!')
 }
 
-logger.good(`[SERVER] Running version ${config.server.version} on port ${config.server.port}
+logger.good(`[SERVER] Version en ejecucion ${config.server.version} on port ${config.server.port}
 [AA]Alexis_X#5882
 Vps Paizacloud No Captcha
 [AA] Family
