@@ -1,7 +1,3 @@
-/*
-Copiar>>>> 
-wss://Alexis-New-Actualizacion.brusce.repl.co
-*/
 const WebSocket = require('ws'),
     { murmur2 } = require('murmurhash-js'),
     buffers = require('./buffers'),
@@ -27,19 +23,20 @@ if (config.server.update) {
         requesterConfig = JSON.parse(requesterData)
 
         if (config.server.version < requesterConfig.server.version) {
-            logger.warn(`[SERVER] Se encontro una nueva actualizacion.!`)
-            logger.warn(`[SERVER] Descargar -> https://github.com/perrop/Alexis-Bot-Free`)
+            logger.warn(`[SERVER] Se encontro una nueva actualizacion!`)
+            logger.warn(`[SERVER] Descargar -> https://jimboy3100.github.io/ExampleScripts/agario-bots2`)
         } else {
-            logger.good(`[SERVER] No se encontraron actualizaciones.!`)
+            logger.good(`[SERVER] No se encontraron actualizaciones!`)
         }
     })
 } else {
-    logger.error('[SERVER] Update is false!')
+    logger.error('[SERVER] La Actualizacion Es Falsa!')
 }
 
-logger.good(`[SERVER] Version en ejecucion ${config.server.version} on port ${config.server.port}
+logger.good(`[SERVER] Running version ${config.server.version} on port ${config.server.port}
 [AA]Alexis_X#5882
-Suscribe :) New Version [AA]
+Vps Paizacloud No Captcha
+[AA] Family
 `);
 const game = {
     url: '',
@@ -117,7 +114,7 @@ const dataBot = {
             case 241:
                 this.buffersKey = reader.readInt32() ^ game.clientVersion
                 this.isConnected = true
-                logger.good('[SERVER] Bot conectado!')
+                logger.good('[SERVER] Bot Conectado!')
                 break
         }
     }
@@ -236,7 +233,7 @@ class Bot {
                         }, 40)
                         userWS.send(Buffer.from([0]))
                         user.startedBots = true
-                        logger.good('[SERVER] Bots Funcionando!')
+                        logger.good('[SERVER] [AA] Bots Funcionando!')
                     }
                     if (!this.followMouseTimeout) {
                         this.followMouseTimeout = setTimeout(() => {
@@ -429,7 +426,7 @@ new WebSocket.Server({
 			var temp = Object.values(JSON.parse(data))	
 			global.globalDataCounter++;
 			global.globalData[global.globalDataCounter]=temp.join("")
-			console.log("Captcha token " + global.globalDataCounter + " recieved")
+			console.log("[AA]Alexis_X#5882 Captcha token " + global.globalDataCounter + " recieved")
 			
                     startBotsInterval = setInterval(() => {
                         if (dataBot.lastPlayersAmount < 195 && connectedBots < bots.amount && user.startedBots){
@@ -455,7 +452,7 @@ new WebSocket.Server({
                     startBotsInterval = setInterval(() => {
                         if (dataBot.lastPlayersAmount < 195 && connectedBots < bots.amount && !stoppingBots) userBots.push(new Bot())
                     }, 150)
-                    logger.good('[SERVER] Comenzando bots...')
+                    logger.good('[SERVER] [AA] Comenzando bots...')
                 }
                 break
             case 1:
@@ -509,6 +506,6 @@ new WebSocket.Server({
                 }
             }, 1000)
         }
-        logger.error('[SERVER] Usuario desconectado!')
+        logger.error('[SERVER] Usuario Desconectado!')
     })
 })
